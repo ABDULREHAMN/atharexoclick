@@ -234,7 +234,7 @@ export function TopNavbar({ onNavigate }: TopNavbarProps) {
               <Button variant="ghost" className="flex items-center space-x-2 hover:bg-gray-100 transition-colors p-2">
                 <div className="flex flex-col items-end mr-2 hidden md:flex">
                   <span className="text-xs text-gray-500 leading-tight">Publisher Account</span>
-                  <span className="text-sm text-gray-700 font-medium leading-tight">Raja Usman</span>
+                  <span className="text-sm text-gray-700 font-medium leading-tight">Musa Ibrahim</span>
                 </div>
                 <div className="w-8 h-8 bg-gray-300 rounded-full flex items-center justify-center">
                   <User size={16} className="text-gray-600" />
@@ -248,7 +248,7 @@ export function TopNavbar({ onNavigate }: TopNavbarProps) {
               sideOffset={5}
             >
               <div className="px-3 py-2 border-b border-gray-100">
-                <p className="text-sm font-medium text-gray-900">rajausman002</p>
+                <p className="text-sm font-medium text-gray-900">Ibrahim071</p>
                 <p className="text-xs text-gray-500">Publisher Account</p>
               </div>
 
