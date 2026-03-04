@@ -24,14 +24,14 @@ export function SiteZoneContent() {
   const [sites, setSites] = useState([
     {
       id: 1,
-      name: "Fancy Diamond Chain",
-      url: "https://fancydiamondchain.com",
-      category: "E-commerce",
+      name: "JiStyler",
+      url: "https://jistyler.com",
+      category: "Technology",
       status: "Approved",
       zones: 10,
-      addedDate: "Mar 03, 2026",
-      description: "Premium jewelry and diamond chain products",
-      siteType: "E-commerce",
+      addedDate: "Feb 27, 2026",
+      description: "JiStyler - Premium styling and design services",
+      siteType: "Service",
     },
   ])
 
@@ -39,7 +39,7 @@ export function SiteZoneContent() {
     {
       id: 201,
       name: "Header Banner",
-      site: "fancydiamondchain.com",
+      site: "jistyler.com",
       format: "Display",
       size: "728x90",
       status: "Live",
@@ -47,7 +47,7 @@ export function SiteZoneContent() {
     {
       id: 202,
       name: "Top Leaderboard",
-      site: "fancydiamondchain.com",
+      site: "jistyler.com",
       format: "Display",
       size: "970x90",
       status: "Live",
@@ -55,7 +55,7 @@ export function SiteZoneContent() {
     {
       id: 203,
       name: "Sidebar Rectangle",
-      site: "fancydiamondchain.com",
+      site: "jistyler.com",
       format: "Display",
       size: "300x250",
       status: "Live",
@@ -63,7 +63,7 @@ export function SiteZoneContent() {
     {
       id: 204,
       name: "Sidebar Large Rectangle",
-      site: "fancydiamondchain.com",
+      site: "jistyler.com",
       format: "Display",
       size: "336x280",
       status: "Live",
@@ -71,7 +71,7 @@ export function SiteZoneContent() {
     {
       id: 205,
       name: "Footer Banner",
-      site: "fancydiamondchain.com",
+      site: "jistyler.com",
       format: "Display",
       size: "728x90",
       status: "Live",
@@ -79,7 +79,7 @@ export function SiteZoneContent() {
     {
       id: 206,
       name: "In-Article Banner",
-      site: "fancydiamondchain.com",
+      site: "jistyler.com",
       format: "Display",
       size: "300x250",
       status: "Live",
@@ -87,7 +87,7 @@ export function SiteZoneContent() {
     {
       id: 207,
       name: "Sticky Footer Ad",
-      site: "fancydiamondchain.com",
+      site: "jistyler.com",
       format: "Display",
       size: "320x50",
       status: "Live",
@@ -95,7 +95,7 @@ export function SiteZoneContent() {
     {
       id: 208,
       name: "Mobile Banner",
-      site: "fancydiamondchain.com",
+      site: "jistyler.com",
       format: "Mobile",
       size: "320x100",
       status: "Live",
@@ -103,7 +103,7 @@ export function SiteZoneContent() {
     {
       id: 209,
       name: "Interstitial",
-      site: "fancydiamondchain.com",
+      site: "jistyler.com",
       format: "Interstitial",
       size: "Full Screen",
       status: "Live",
@@ -111,7 +111,7 @@ export function SiteZoneContent() {
     {
       id: 210,
       name: "Video Pre-Roll",
-      site: "fancydiamondchain.com",
+      site: "jistyler.com",
       format: "Video",
       size: "16:9",
       status: "Live",

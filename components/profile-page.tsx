@@ -15,24 +15,24 @@ interface ProfilePageProps {
 }
 
 const ACCOUNT_STATISTICS = {
-  totalRevenue: 26.98,
-  totalImpressions: 9575,
-  totalClicks: 125,
+  totalRevenue: 0.003,
+  totalImpressions: 10,
+  totalClicks: 1,
 } as const
 
 export function ProfilePage({ onBack }: ProfilePageProps) {
   const { kycStatus, verificationDate, kycReference, fullName } = useKyc()
   const [isEditing, setIsEditing] = useState(false)
   const [profileData, setProfileData] = useState({
-    fullName: "Sheeraz Pia",
-    email: "sherazpia76eez332@gmail.com",
-    username: "sheraazpia07",
+    fullName: "Musa Ibrahim",
+    email: "musaibrahim786@gmail.com",
+    username: "Ibrahim071",
     company: "",
-    phone: "+1 (555) 123-4567",
+    phone: "",
     address: "",
     bio: "",
-    website: "https://fancydiamondchain.com",
-    joinDate: "03 March 2026",
+    website: "https://jistyler.com",
+    joinDate: "27 February 2026",
   })
 
   const handleSave = () => {
