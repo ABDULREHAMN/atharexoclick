@@ -1599,6 +1599,20 @@ ${exportData.map((d) => `${d.Date} | Revenue: ${d.Revenue} | Impressions: ${d.Im
                   isAnimationActive={true}
                   connectNulls={true}
                 />
+                <Line
+                  yAxisId="right"
+                  type="monotoneX"
+                  dataKey="clicks"
+                  stroke="#f59e0b"
+                  strokeWidth={2}
+                  dot={{ r: 3, fill: "#f59e0b", strokeWidth: 2, stroke: "#fff" }}
+                  activeDot={{ r: 6, fill: "#f59e0b", strokeWidth: 2, stroke: "#fff" }}
+                  name="Clicks"
+                  animationDuration={450}
+                  animationEasing="ease-out"
+                  isAnimationActive={true}
+                  connectNulls={true}
+                />
               </LineChart>
             </ResponsiveContainer>
           </div>

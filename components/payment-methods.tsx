@@ -34,9 +34,9 @@ export function PaymentMethods() {
       details: "abdul.rehman.soashraf@gmail.com",
       verified: true,
       isDefault: true,
-      addedDate: "Oct 1, 2025",
+      addedDate: "Feb 27, 2026",
       icon: "payoneer",
-      network: "Musa Ibrahim",
+      network: "Abdul Rehman",
       status: "active",
     },
   ])
