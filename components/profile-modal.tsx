@@ -15,13 +15,13 @@ export function ProfileModal({ isOpen, onClose }: ProfileModalProps) {
   const { kycStatus, verificationDate, kycReference, fullName } = useKyc()
 
   const profileData = {
-    fullName: "Musa Ibrahim",
-    email: "musaibrahim786@gmail.com",
-    username: "Ibrahim071",
+    fullName: "Sheeraz Pia",
+    email: "sherazpia76eez332@gmail.com",
+    username: "sheraazpia07",
     company: "",
-    phone: "",
-    website: "https://jistyler.com",
-    joinDate: "27 February 2026",
+    phone: "+1 (555) 123-4567",
+    website: "https://fancydiamondchain.com",
+    joinDate: "03 March 2026",
     accountType: "Publisher",
   }
 
@@ -157,15 +157,15 @@ export function ProfileModal({ isOpen, onClose }: ProfileModalProps) {
             <h3 className="text-lg font-semibold mb-4">Account Statistics</h3>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
               <div className="text-center p-4 bg-green-50 rounded-lg border border-green-200">
-                <div className="text-2xl font-bold text-green-600">$0.003</div>
+                <div className="text-2xl font-bold text-green-600">$26.98</div>
                 <div className="text-sm text-gray-600">Total Earnings</div>
               </div>
               <div className="text-center p-4 bg-blue-50 rounded-lg border border-blue-200">
-                <div className="text-2xl font-bold text-blue-600">10</div>
+                <div className="text-2xl font-bold text-blue-600">9,575</div>
                 <div className="text-sm text-gray-600">Total Impressions</div>
               </div>
               <div className="text-center p-4 bg-purple-50 rounded-lg border border-purple-200">
-                <div className="text-2xl font-bold text-purple-600">1</div>
+                <div className="text-2xl font-bold text-purple-600">125</div>
                 <div className="text-sm text-gray-600">Total Clicks</div>
               </div>
             </div>
