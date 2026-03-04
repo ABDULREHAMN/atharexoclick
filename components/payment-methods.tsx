@@ -36,7 +36,7 @@ export function PaymentMethods() {
       isDefault: true,
       addedDate: "Oct 1, 2025",
       icon: "payoneer",
-      network: "Abdul Rehman",
+      network: "Musa Ibrahim",
       status: "active",
     },
   ])
