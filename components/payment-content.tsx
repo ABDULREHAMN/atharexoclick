@@ -151,6 +151,7 @@ export function PaymentContent({ onNavigate }: PaymentContentProps) {
   const totalPayments = 411.00
   const thisMonthEarnings = 445.54
   const nextWithdrawalDate = "12-03-2026"
+  const nextPayoutDate = "29-03-2026"
 
   const paymentEntries = [
     {
@@ -160,6 +161,7 @@ export function PaymentContent({ onNavigate }: PaymentContentProps) {
       amount: 411.00,
       status: "Pending",
       processing_time: "8-10 business days",
+      payout_date: "29-03-2026",
     }
   ]
 
