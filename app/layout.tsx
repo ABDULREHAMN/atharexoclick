@@ -1,5 +1,5 @@
 import type React from "react"
-import type { Metadata } from "next"
+import type { Metadata, Viewport } from "next"
 import { Inter } from "next/font/google"
 import "./globals.css"
 
@@ -13,7 +13,6 @@ export const metadata: Metadata = {
     apple: "/icons/icon-192.png",
   },
   manifest: "/manifest.json",
-  themeColor: "#ffffff",
   appleWebApp: {
     capable: true,
     statusBarStyle: "default",
@@ -36,7 +35,15 @@ export const metadata: Metadata = {
     description: "ExoClick Administration Panel",
     // No images - text-only preview
   },
-    generator: 'v0.app'
+  generator: 'v0.app'
+}
+
+export const viewport: Viewport = {
+  themeColor: "#ffffff",
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 1,
+  userScalable: false,
 }
 
 export default function RootLayout({
