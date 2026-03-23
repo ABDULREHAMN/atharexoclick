@@ -9,25 +9,31 @@ const reportData = {
   "Last 7 Days": {
     "All Countries": {
       "All Devices": [
-        { date: "Mar 16, 2026", impressions: "5280", clicks: "345", ctr: "6.53%", ecpm: "$45.33", revenue: "$45.78" },
         { date: "Mar 17, 2026", impressions: "5280", clicks: "295", ctr: "5.59%", ecpm: "$46.81", revenue: "$46.23" },
         { date: "Mar 18, 2026", impressions: "5181", clicks: "310", ctr: "5.98%", ecpm: "$44.38", revenue: "$45.81" },
         { date: "Mar 19, 2026", impressions: "5181", clicks: "310", ctr: "5.98%", ecpm: "$44.35", revenue: "$46.27" },
-        { date: "Mar 20, 2026", impressions: "2125", clicks: "220", ctr: "10.35%", ecpm: "$43.31", revenue: "$22.33" },
+        { date: "Mar 20, 2026", impressions: "5664", clicks: "342", ctr: "6.04%", ecpm: "$45.33", revenue: "$45.33" },
+        { date: "Mar 21, 2026", impressions: "5280", clicks: "345", ctr: "6.53%", ecpm: "$45.12", revenue: "$47.32" },
+        { date: "Mar 22, 2026", impressions: "5525", clicks: "362", ctr: "6.55%", ecpm: "$46.88", revenue: "$48.21" },
+        { date: "Mar 23, 2026", impressions: "2321", clicks: "222", ctr: "9.56%", ecpm: "$47.22", revenue: "$22.00" },
       ],
       Desktop: [
-        { date: "Mar 16, 2026", impressions: "5280", clicks: "345", ctr: "6.53%", ecpm: "$45.33", revenue: "$45.78" },
         { date: "Mar 17, 2026", impressions: "5280", clicks: "295", ctr: "5.59%", ecpm: "$46.81", revenue: "$46.23" },
         { date: "Mar 18, 2026", impressions: "5181", clicks: "310", ctr: "5.98%", ecpm: "$44.38", revenue: "$45.81" },
         { date: "Mar 19, 2026", impressions: "5181", clicks: "310", ctr: "5.98%", ecpm: "$44.35", revenue: "$46.27" },
-        { date: "Mar 20, 2026", impressions: "2125", clicks: "220", ctr: "10.35%", ecpm: "$43.31", revenue: "$22.33" },
+        { date: "Mar 20, 2026", impressions: "5664", clicks: "342", ctr: "6.04%", ecpm: "$45.33", revenue: "$45.33" },
+        { date: "Mar 21, 2026", impressions: "5280", clicks: "345", ctr: "6.53%", ecpm: "$45.12", revenue: "$47.32" },
+        { date: "Mar 22, 2026", impressions: "5525", clicks: "362", ctr: "6.55%", ecpm: "$46.88", revenue: "$48.21" },
+        { date: "Mar 23, 2026", impressions: "2321", clicks: "222", ctr: "9.56%", ecpm: "$47.22", revenue: "$22.00" },
       ],
       Mobile: [
-        { date: "Mar 16, 2026", impressions: "5280", clicks: "345", ctr: "6.53%", ecpm: "$45.33", revenue: "$45.78" },
         { date: "Mar 17, 2026", impressions: "5280", clicks: "295", ctr: "5.59%", ecpm: "$46.81", revenue: "$46.23" },
         { date: "Mar 18, 2026", impressions: "5181", clicks: "310", ctr: "5.98%", ecpm: "$44.38", revenue: "$45.81" },
         { date: "Mar 19, 2026", impressions: "5181", clicks: "310", ctr: "5.98%", ecpm: "$44.35", revenue: "$46.27" },
-        { date: "Mar 20, 2026", impressions: "2125", clicks: "220", ctr: "10.35%", ecpm: "$43.31", revenue: "$22.33" },
+        { date: "Mar 20, 2026", impressions: "5664", clicks: "342", ctr: "6.04%", ecpm: "$45.33", revenue: "$45.33" },
+        { date: "Mar 21, 2026", impressions: "5280", clicks: "345", ctr: "6.53%", ecpm: "$45.12", revenue: "$47.32" },
+        { date: "Mar 22, 2026", impressions: "5525", clicks: "362", ctr: "6.55%", ecpm: "$46.88", revenue: "$48.21" },
+        { date: "Mar 23, 2026", impressions: "2321", clicks: "222", ctr: "9.56%", ecpm: "$47.22", revenue: "$22.00" },
       ],
     },
   },
@@ -174,11 +180,11 @@ const reportData = {
 }
 
 const statisticsTotals = {
-  impressions: 128276,
-  clicks: 10842,
-  revenue: 830.77,
-  ecpm: 34.49,
-  ctr: 8.45,
+  impressions: 141402,
+  clicks: 11771,
+  revenue: 948.30,
+  ecpm: 34.61,
+  ctr: 8.32,
 }
 
 export function ReportContent() {
