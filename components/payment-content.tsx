@@ -145,13 +145,12 @@ export function PaymentContent({ onNavigate }: PaymentContentProps) {
     return () => clearInterval(interval)
   }, [withdrawalHistory])
 
-  const availableBalance = 34.54
-  const pendingBalance = 411.00
-  const totalEarnings = 445.54
-  const totalPayments = 411.00
-  const thisMonthEarnings = 445.54
-  const nextWithdrawalDate = "12-03-2026"
-  const nextPayoutDate = "25-03-2026"
+  const availableBalance = 197.16
+  const pendingBalance = 0
+  const totalEarnings = 1110.92
+  const totalPayments = 0
+  const thisMonthEarnings = 1110.92
+  const nextWithdrawalDate = ""
 
   const paymentEntries = [
     {
@@ -159,8 +158,8 @@ export function PaymentContent({ onNavigate }: PaymentContentProps) {
       date: "12-03-2026",
       method: "Payoneer",
       amount: 411.00,
-      status: "Pending",
-      processing_time: "8-10 business days",
+      status: "Completed",
+      processing_time: "Completed",
       payout_date: "25-03-2026",
     }
   ]
