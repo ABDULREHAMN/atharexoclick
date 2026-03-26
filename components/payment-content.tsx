@@ -71,7 +71,7 @@ export function PaymentContent({ onNavigate }: PaymentContentProps) {
       method: "Payoneer",
       status: "Pending",
       email: "abdul.rehman.soashraf@gmail.com",
-      processingTime: "8-10 business days",
+      processingTime: "Scheduled for 29 March payout",
     }
   ])
 
@@ -145,12 +145,12 @@ export function PaymentContent({ onNavigate }: PaymentContentProps) {
     return () => clearInterval(interval)
   }, [withdrawalHistory])
 
-  const availableBalance = 197.16
-  const pendingBalance = 0
+  const availableBalance = 699.92
+  const pendingBalance = 411.00
   const totalEarnings = 1110.92
-  const totalPayments = 0
+  const totalPayments = 411.00
   const thisMonthEarnings = 1110.92
-  const nextWithdrawalDate = ""
+  const nextWithdrawalDate = "29-03-2026"
 
   const paymentEntries = [
     {
@@ -158,9 +158,9 @@ export function PaymentContent({ onNavigate }: PaymentContentProps) {
       date: "12-03-2026",
       method: "Payoneer",
       amount: 411.00,
-      status: "Completed",
-      processing_time: "Completed",
-      payout_date: "25-03-2026",
+      status: "Pending",
+      processing_time: "Scheduled for 29 March payout",
+      payout_date: "29-03-2026",
     }
   ]
 
