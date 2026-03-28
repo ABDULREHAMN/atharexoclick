@@ -69,9 +69,9 @@ export function PaymentContent({ onNavigate }: PaymentContentProps) {
       date: "12-03-2026",
       amount: 411.00,
       method: "Payoneer",
-      status: "Pending",
+      status: "Completed",
       email: "abdul.rehman.soashraf@gmail.com",
-      processingTime: "Scheduled for 29 March payout",
+      processingTime: "Completed on 29-03-2026",
     }
   ])
 
@@ -158,8 +158,8 @@ export function PaymentContent({ onNavigate }: PaymentContentProps) {
       date: "12-03-2026",
       method: "Payoneer",
       amount: 411.00,
-      status: "Pending",
-      processing_time: "Scheduled for 29 March payout",
+      status: "Completed",
+      processing_time: "Completed on 29-03-2026",
       payout_date: "29-03-2026",
     }
   ]
