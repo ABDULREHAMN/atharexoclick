@@ -76,11 +76,11 @@ export function PaymentContent({ onNavigate }: PaymentContentProps) {
     {
       id: "WD-29032026",
       date: "29-03-2026",
-      amount: 1055.00,
+      amount: 829.80,
       method: "Payoneer",
       status: "Pending",
       email: "abdul.rehman.soashraf@gmail.com",
-      processingTime: "8-10 days",
+      processingTime: "Restored original withdrawal",
     }
   ])
 
@@ -155,10 +155,10 @@ export function PaymentContent({ onNavigate }: PaymentContentProps) {
   }, [withdrawalHistory])
 
   const availableBalance = 0
-  const pendingBalance = 1055.00
-  const totalEarnings = 1525.23
+  const pendingBalance = 829.80
+  const totalEarnings = 2074.23
   const totalPayments = 1241.00
-  const thisMonthEarnings = 1525.23
+  const thisMonthEarnings = 284.00
   const nextWithdrawalDate = "29-03-2026"
 
   const paymentEntries = [
@@ -166,9 +166,9 @@ export function PaymentContent({ onNavigate }: PaymentContentProps) {
       id: "WD-29032026",
       date: "29-03-2026",
       method: "Payoneer",
-      amount: 1055.00,
+      amount: 829.80,
       status: "Pending",
-      processing_time: "8-10 days",
+      processing_time: "Restored original withdrawal",
       payout_date: "29-03-2026",
     }
   ]
