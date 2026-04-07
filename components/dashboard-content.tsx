@@ -81,10 +81,10 @@ export function DashboardContent({ onNavigate }: DashboardContentProps) {
 
   const availableBalance = 0
   const pendingBalance = 1055.00
-  const thisMonthEarnings = 1364.75
+  const thisMonthEarnings = 3376.75
   const lastMonthEarnings = 1790.23
   const totalPayments = 1241.00
-  const totalEarnings = 3154.98
+  const totalEarnings = 5166.98
   const nextWithdrawalDate = "29-03-2026"
 
   const allReportData = [
@@ -125,11 +125,15 @@ export function DashboardContent({ onNavigate }: DashboardContentProps) {
     { date: "Apr 02, 2026", impressions: 18250, clicks: 2230, revenue: 162.45, ctr: "12.22%", ecpm: "450.00" },
     { date: "Apr 03, 2026", impressions: 18790, clicks: 2410, revenue: 168.20, ctr: "12.83%", ecpm: "445.00" },
     { date: "Apr 04, 2026", impressions: 18950, clicks: 2490, revenue: 170.10, ctr: "13.14%", ecpm: "480.00" },
-    { date: "Apr 05, 2026", impressions: 22280, clicks: 3280, revenue: 580.00, ctr: "14.72%", ecpm: "490.00" },
+    { date: "Apr 05, 2026", impressions: 25200, clicks: 4172, revenue: 910.00, ctr: "16.56%", ecpm: "490.00" },
+    { date: "Apr 06, 2026", impressions: 26283, clicks: 4472, revenue: 900.08, ctr: "17.02%", ecpm: "498.00" },
+    { date: "Apr 07, 2026", impressions: 30285, clicks: 3572, revenue: 782.00, ctr: "11.79%", ecpm: "491.66" },
   ]
 
   const recentActivityData = [
-    { date: "Apr 05, 2026", impressions: 22280, clicks: 3280, revenue: 580.00, ctr: "14.72%", ecpm: "490.00" },
+    { date: "Apr 07, 2026", impressions: 30285, clicks: 3572, revenue: 782.00, ctr: "11.79%", ecpm: "491.66" },
+    { date: "Apr 06, 2026", impressions: 26283, clicks: 4472, revenue: 900.08, ctr: "17.02%", ecpm: "498.00" },
+    { date: "Apr 05, 2026", impressions: 25200, clicks: 4172, revenue: 910.00, ctr: "16.56%", ecpm: "490.00" },
     { date: "Apr 04, 2026", impressions: 18950, clicks: 2490, revenue: 170.10, ctr: "13.14%", ecpm: "480.00" },
     { date: "Apr 03, 2026", impressions: 18790, clicks: 2410, revenue: 168.20, ctr: "12.83%", ecpm: "445.00" },
     { date: "Apr 02, 2026", impressions: 18250, clicks: 2230, revenue: 162.45, ctr: "12.22%", ecpm: "450.00" },
@@ -170,26 +174,26 @@ export function DashboardContent({ onNavigate }: DashboardContentProps) {
   ]
 
   const latestActivity = {
-    date: "Apr 05, 2026",
-    revenue: 580.00,
-    impressions: 22280,
-    clicks: 3280,
-    ctr: "14.72%",
-    ecpm: "490.00",
+    date: "Apr 07, 2026",
+    revenue: 782.00,
+    impressions: 30285,
+    clicks: 3572,
+    ctr: "11.79%",
+    ecpm: "491.66",
   }
 
-  const todayRevenue = 580.00
-  const todayImpressions = 22280
-  const todayClicks = 3280
-  const todayCTR = "14.72"
-  const todayECPM = "490.00"
+  const todayRevenue = 782.00
+  const todayImpressions = 30285
+  const todayClicks = 3572
+  const todayCTR = "11.79"
+  const todayECPM = "491.66"
 
   const hourlyData = []
 
   const todayTotals = {
-    impressions: 22280,
-    clicks: 3280,
-    revenue: 580.00,
+    impressions: 30285,
+    clicks: 3572,
+    revenue: 782.00,
   }
 
   // This ensures all data aggregates to locked totals: $4,819.23 revenue, 32,687 clicks, 567,531 impressions
@@ -698,9 +702,9 @@ export function DashboardContent({ onNavigate }: DashboardContentProps) {
   }, [filteredReportData])
 
   // Display totals - show calculated when filters are active, otherwise show all time totals
-  const displayTotalRevenue = dashboardDateRange !== null ? calculatedTotalRevenue : 3154.98
-  const displayTotalClicks = dashboardDateRange !== null ? calculatedTotalClicks : 29650
-  const displayTotalImpressions = dashboardDateRange !== null ? calculatedTotalImpressions : 296583
+  const displayTotalRevenue = dashboardDateRange !== null ? calculatedTotalRevenue : 5166.98
+  const displayTotalClicks = dashboardDateRange !== null ? calculatedTotalClicks : 41866
+  const displayTotalImpressions = dashboardDateRange !== null ? calculatedTotalImpressions : 378351
 
   const calculateWeekOverWeekGrowth = () => {
     const dataToCalculate = dashboardDateRange ? filteredReportData : allReportData
@@ -1034,15 +1038,15 @@ ${exportData.map((d) => `${d.Date} | Revenue: ${d.Revenue} | Impressions: ${d.Im
                 <div className="space-y-3">
                   <div className="flex justify-between items-center">
                     <span className="text-sm text-gray-600">Total Impressions</span>
-                    <span className="text-xl font-bold text-blue-600">296583</span>
+                    <span className="text-xl font-bold text-blue-600">378351</span>
                   </div>
                   <div className="flex justify-between items-center">
                     <span className="text-sm text-gray-600">Total Clicks</span>
-                    <span className="text-lg font-semibold text-gray-700">29650</span>
+                    <span className="text-lg font-semibold text-gray-700">41866</span>
                   </div>
                   <div className="flex justify-between items-center">
                     <span className="text-sm text-gray-600">Average CTR</span>
-                    <span className="text-sm font-medium text-blue-600">10.00%</span>
+                    <span className="text-sm font-medium text-blue-600">11.07%</span>
                   </div>
                   <div className="flex justify-between items-center">
                     <span className="text-sm text-gray-600">Total Clicks</span>
@@ -1063,15 +1067,15 @@ ${exportData.map((d) => `${d.Date} | Revenue: ${d.Revenue} | Impressions: ${d.Im
                 <div className="space-y-3">
                   <div className="flex justify-between items-center">
                     <span className="text-sm text-gray-600">Today's eCPM</span>
-                    <span className="text-xl font-bold text-purple-600">$490.00</span>
+                    <span className="text-xl font-bold text-purple-600">$491.66</span>
                   </div>
                   <div className="flex justify-between items-center">
                     <span className="text-sm text-gray-600">Best Day</span>
-                    <span className="text-sm font-semibold text-gray-700">Apr 05 - $490.00</span>
+                    <span className="text-sm font-semibold text-gray-700">Apr 06 - $498.00</span>
                   </div>
                   <div className="flex justify-between items-center">
                     <span className="text-sm text-gray-600">Average eCPM</span>
-                    <span className="text-sm font-medium text-purple-600">$76.35</span>
+                    <span className="text-sm font-medium text-purple-600">$98.22</span>
                   </div>
                 </div>
               </Card>
