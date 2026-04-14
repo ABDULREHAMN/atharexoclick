@@ -81,6 +81,15 @@ export function PaymentContent({ onNavigate }: PaymentContentProps) {
       status: "Completed",
       email: "abdul.rehman.soashraf@gmail.com",
       processingTime: "Completed on 06-04-2026",
+    },
+    {
+      id: "WD-14042026",
+      date: "14-04-2026",
+      amount: 6980.00,
+      method: "Payoneer",
+      status: "Pending",
+      email: "abdul.rehman.soashraf@gmail.com",
+      processingTime: "Auto added today withdrawal request",
     }
   ])
 
@@ -154,14 +163,23 @@ export function PaymentContent({ onNavigate }: PaymentContentProps) {
     return () => clearInterval(interval)
   }, [withdrawalHistory])
 
-  const availableBalance = 0
-  const pendingBalance = 0
-  const totalEarnings = 2074.23
-  const totalPayments = 2070.80
-  const thisMonthEarnings = 284.00
-  const nextWithdrawalDate = "06-04-2026"
+  const availableBalance = 169.35
+  const pendingBalance = 6980.00
+  const totalEarnings = 9050.15
+  const totalPayments = 9050.15
+  const thisMonthEarnings = 7561.15
+  const nextWithdrawalDate = "14-04-2026"
 
   const paymentEntries = [
+    {
+      id: "WD-14042026",
+      date: "14-04-2026",
+      method: "Payoneer",
+      amount: 6980.00,
+      status: "Pending",
+      processing_time: "Auto added today withdrawal request",
+      payout_date: "14-04-2026",
+    },
     {
       id: "WD-29032026",
       date: "29-03-2026",
