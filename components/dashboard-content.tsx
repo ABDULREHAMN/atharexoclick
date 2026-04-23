@@ -79,12 +79,12 @@ export function DashboardContent({ onNavigate }: DashboardContentProps) {
     }
   }
 
-  const availableBalance = 0
+  const availableBalance = 3290.33
   const pendingBalance = 1055.00
-  const thisMonthEarnings = 8719.35
-  const lastMonthEarnings = 1790.23
-  const totalPayments = 1241.00
-  const totalEarnings = 11510.58
+  const thisMonthEarnings = 9770.43
+  const lastMonthEarnings = 1519.20
+  const totalPayments = 8220.00
+  const totalEarnings = 11343.89
   const nextWithdrawalDate = "29-03-2026"
 
   const allReportData = [
@@ -734,7 +734,7 @@ export function DashboardContent({ onNavigate }: DashboardContentProps) {
   }, [filteredReportData])
 
   // Display totals - show calculated when filters are active, otherwise show all time totals
-  const displayTotalRevenue = dashboardDateRange !== null ? calculatedTotalRevenue : 11510.58
+  const displayTotalRevenue = dashboardDateRange !== null ? calculatedTotalRevenue : 11343.89
   const displayTotalClicks = dashboardDateRange !== null ? calculatedTotalClicks : 60653
   const displayTotalImpressions = dashboardDateRange !== null ? calculatedTotalImpressions : 560835
 
