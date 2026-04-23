@@ -83,6 +83,7 @@ export function DashboardContent({ onNavigate }: DashboardContentProps) {
   const pendingBalance = 1055.00
   const thisMonthEarnings = 9770.43
   const lastMonthEarnings = 1519.20
+  const thisMonthForecast = 11250.00
   const totalPayments = 8220.00
   const totalEarnings = 11343.89
   const nextWithdrawalDate = "29-03-2026"
@@ -1055,10 +1056,14 @@ ${exportData.map((d) => `${d.Date} | Revenue: ${d.Revenue} | Impressions: ${d.Im
   <span className="text-sm text-gray-600">Last Month</span>
   <span className="text-lg font-semibold text-gray-700">${(lastMonthEarnings).toFixed(2)}</span>
   </div>
-                  <div className="flex justify-between items-center">
-                    <span className="text-sm text-gray-600">Growth Rate</span>
-                    <span className="text-sm font-medium text-green-600">0%</span>
-                  </div>
+  <div className="flex justify-between items-center">
+  <span className="text-sm text-gray-600">This Month Forecast</span>
+  <span className="text-lg font-semibold text-blue-600">${(thisMonthForecast).toFixed(2)}</span>
+  </div>
+  <div className="flex justify-between items-center">
+  <span className="text-sm text-gray-600">Growth Rate</span>
+  <span className="text-sm font-medium text-green-600">0%</span>
+  </div>
                 </div>
               </Card>
 
