@@ -1051,10 +1051,10 @@ ${exportData.map((d) => `${d.Date} | Revenue: ${d.Revenue} | Impressions: ${d.Im
                     <span className="text-sm text-gray-600">This Month</span>
                     <span className="text-xl font-bold text-green-600">${(thisMonthEarnings).toFixed(2)}</span>
                   </div>
-                  <div className="flex justify-between items-center">
-                    <span className="text-sm text-gray-600">Last Month</span>
-                    <span className="text-lg font-semibold text-gray-700">$0.00</span>
-                  </div>
+  <div className="flex justify-between items-center">
+  <span className="text-sm text-gray-600">Last Month</span>
+  <span className="text-lg font-semibold text-gray-700">${(lastMonthEarnings).toFixed(2)}</span>
+  </div>
                   <div className="flex justify-between items-center">
                     <span className="text-sm text-gray-600">Growth Rate</span>
                     <span className="text-sm font-medium text-green-600">0%</span>
