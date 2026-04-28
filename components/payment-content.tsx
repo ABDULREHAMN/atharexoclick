@@ -36,10 +36,13 @@ import { WithdrawalDetailsModal, type WithdrawalDetails } from "./withdrawal-det
 interface PaymentMethodData {
   id: string
   type: "payoneer" | "bank" | "crypto"
-  accountHolderName: string
-  email: string
-  country: string
-  currency: string
+  accountHolderName?: string
+  email?: string
+  country?: string
+  currency?: string
+  walletAddress?: string
+  walletProvider?: string
+  method?: string
   status: "Active" | "Pending Approval" | "Inactive"
   isDefault: boolean
   priority: number
@@ -52,7 +55,7 @@ interface PaymentContentProps {
 
 export function PaymentContent({ onNavigate }: PaymentContentProps) {
   const [withdrawAmount, setWithdrawAmount] = useState("")
-  const [paymentMethod, setPaymentMethod] = useState("payoneer")
+  const [paymentMethod, setPaymentMethod] = useState("crypto")
   const [paypalEmail, setPaypalEmail] = useState("")
   const [payoneerEmail, setPayoneerEmail] = useState("")
   const [showError, setShowError] = useState(false)
@@ -95,16 +98,15 @@ export function PaymentContent({ onNavigate }: PaymentContentProps) {
 
   const [paymentMethods, setPaymentMethods] = useState<PaymentMethodData[]>([
     {
-      id: "pm-1",
-      type: "payoneer",
-      accountHolderName: "Abdul Rehman",
-      email: "abdul.rehman.soashraf@gmail.com",
-      country: "Pakistan",
-      currency: "USD",
+      id: "usdt_bep20_primary",
+      type: "crypto",
+      method: "USDT (BEP20)",
+      walletAddress: "0x5b9b7A64aCe005C7b4FBec2f3Cba2C632cca8B8f",
+      walletProvider: "SafePal",
       status: "Active",
       isDefault: true,
       priority: 1,
-      addedDate: "Feb 27, 2026",
+      addedDate: "Apr 29, 2026",
     },
   ])
 
@@ -163,12 +165,12 @@ export function PaymentContent({ onNavigate }: PaymentContentProps) {
     return () => clearInterval(interval)
   }, [withdrawalHistory])
 
-  const availableBalance = 3290.33
-  const pendingBalance = 6980.00
-  const totalEarnings = 11343.89
+  const availableBalance = 3535.26
+  const pendingBalance = 1055.00
+  const totalEarnings = 12258.09
   const totalPayments = 8220.00
-  const thisMonthEarnings = 9770.43
-  const nextWithdrawalDate = "14-04-2026"
+  const thisMonthEarnings = 10684.63
+  const nextWithdrawalDate = "29-04-2026"
 
   const paymentEntries = [
     {
