@@ -93,6 +93,15 @@ export function PaymentContent({ onNavigate }: PaymentContentProps) {
       status: "Cancelled",
       email: "abdul.rehman.soashraf@gmail.com",
       processingTime: "Failed - Limit Issue - Amount reversed to balance on 29-04-2026",
+    },
+    {
+      id: "WD-30042026",
+      date: "30-04-2026",
+      amount: 9780.33,
+      method: "USDT (BEP20)",
+      status: "Pending",
+      email: "abdul.rehman.soashraf@gmail.com",
+      processingTime: "Crypto withdrawal initiated - Processing time 8-10 days - Fee: $5.00 - Final amount: $9,775.33",
     }
   ])
 
@@ -165,14 +174,23 @@ export function PaymentContent({ onNavigate }: PaymentContentProps) {
     return () => clearInterval(interval)
   }, [withdrawalHistory])
 
-  const availableBalance = 10515.26
-  const pendingBalance = 0
+  const availableBalance = 734.93
+  const pendingBalance = 9780.33
   const totalEarnings = 12258.09
-  const totalPayments = 8220.00
+  const totalPayments = 18000.33
   const thisMonthEarnings = 10684.63
-  const nextWithdrawalDate = "29-04-2026"
+  const nextWithdrawalDate = "30-04-2026"
 
   const paymentEntries = [
+    {
+      id: "WD-30042026",
+      date: "30-04-2026",
+      method: "USDT (BEP20)",
+      amount: 9780.33,
+      status: "Pending",
+      processing_time: "Crypto withdrawal initiated - Processing time 8-10 days - Fee: $5.00 - Final: $9,775.33",
+      payout_date: "30-04-2026",
+    },
     {
       id: "WD-14042026",
       date: "14-04-2026",
