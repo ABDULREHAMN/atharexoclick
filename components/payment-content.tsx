@@ -90,9 +90,9 @@ export function PaymentContent({ onNavigate }: PaymentContentProps) {
       date: "14-04-2026",
       amount: 6980.00,
       method: "Payoneer",
-      status: "Pending",
+      status: "Cancelled",
       email: "abdul.rehman.soashraf@gmail.com",
-      processingTime: "Auto added today withdrawal request",
+      processingTime: "Failed - Limit Issue - Amount reversed to balance on 29-04-2026",
     }
   ])
 
@@ -165,8 +165,8 @@ export function PaymentContent({ onNavigate }: PaymentContentProps) {
     return () => clearInterval(interval)
   }, [withdrawalHistory])
 
-  const availableBalance = 3535.26
-  const pendingBalance = 1055.00
+  const availableBalance = 10515.26
+  const pendingBalance = 0
   const totalEarnings = 12258.09
   const totalPayments = 8220.00
   const thisMonthEarnings = 10684.63
@@ -178,8 +178,8 @@ export function PaymentContent({ onNavigate }: PaymentContentProps) {
       date: "14-04-2026",
       method: "Payoneer",
       amount: 6980.00,
-      status: "Pending",
-      processing_time: "Auto added today withdrawal request",
+      status: "Cancelled",
+      processing_time: "Failed - Limit Issue - Amount reversed to balance on 29-04-2026",
       payout_date: "14-04-2026",
     },
     {
