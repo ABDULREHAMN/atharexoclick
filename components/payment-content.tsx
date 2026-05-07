@@ -17,6 +17,7 @@ import {
   Check,
   ChevronRight,
   ChevronLeft,
+  AlertCircle,
 } from "lucide-react"
 import { Card } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
@@ -64,6 +65,8 @@ export function PaymentContent({ onNavigate }: PaymentContentProps) {
   const [showWithdrawalDetails, setShowWithdrawalDetails] = useState(false)
   const [showBankTransferConfirmation, setShowBankTransferConfirmation] = useState(false)
   const [selectedPaymentEntry, setSelectedPaymentEntry] = useState<any>(null)
+  const [walletAddressInactive, setWalletAddressInactive] = useState(true)
+  const [showChangeAddressModal, setShowChangeAddressModal] = useState(false)
   const { kycStatus, openKycPromptModal } = useKyc()
 
   const [withdrawalHistory, setWithdrawalHistory] = useState<WithdrawalDetails[]>([
@@ -262,6 +265,12 @@ export function PaymentContent({ onNavigate }: PaymentContentProps) {
       setSelectedWithdrawal(withdrawal)
       setShowWithdrawalDetails(true)
     }
+  }
+
+  const handleChangeWalletAddress = () => {
+    // Mark wallet as active and close modal
+    setWalletAddressInactive(false)
+    setShowChangeAddressModal(false)
   }
 
   const handleDownloadPDF = (paymentEntry: any) => {
@@ -477,6 +486,27 @@ Generated on: ${new Date().toLocaleDateString()}
             </TabsList>
 
             <TabsContent value="withdraw" className="space-y-6">
+              {walletAddressInactive && paymentMethod === "crypto" && (
+                <Card className="p-4 bg-orange-50 border-orange-300 border-2">
+                  <div className="flex items-start gap-4">
+                    <AlertCircle className="text-orange-600 flex-shrink-0 mt-0.5" size={24} />
+                    <div className="flex-1">
+                      <h3 className="font-semibold text-orange-900 mb-1">Wallet Address Inactive</h3>
+                      <p className="text-sm text-orange-800 mb-3">
+                        Your current USDT (BEP20) wallet address appears inactive. Payment cannot be processed to this address. Please update your wallet address to continue withdrawal processing.
+                      </p>
+                      <Button
+                        size="sm"
+                        className="bg-orange-600 hover:bg-orange-700 text-white"
+                        onClick={() => setShowChangeAddressModal(true)}
+                      >
+                        Change Address
+                      </Button>
+                    </div>
+                  </div>
+                </Card>
+              )}
+
               <Card className="p-4 bg-green-50 border-green-200">
                 <div className="flex items-center justify-between">
                   <div>
@@ -576,7 +606,8 @@ Generated on: ${new Date().toLocaleDateString()}
                       !withdrawAmount ||
                       Number(withdrawAmount) <= 0 ||
                       (paymentMethod === "paypal" && !paypalEmail) ||
-                      (paymentMethod === "payoneer" && !payoneerEmail)
+                      (paymentMethod === "payoneer" && !payoneerEmail) ||
+                      (paymentMethod === "crypto" && walletAddressInactive)
                     }
                   >
                     {paymentMethod === "payoneer" ? (
@@ -1186,6 +1217,46 @@ Generated on: ${new Date().toLocaleDateString()}
         withdrawal={selectedWithdrawal}
         allWithdrawals={[]}
       />
+
+      <Dialog open={showChangeAddressModal} onOpenChange={setShowChangeAddressModal}>
+        <DialogContent>
+          <DialogHeader>
+            <DialogTitle className="flex items-center gap-2">
+              <AlertCircle className="text-orange-600" size={24} />
+              Update Wallet Address
+            </DialogTitle>
+          </DialogHeader>
+          <div className="space-y-4">
+            <div>
+              <p className="text-sm text-gray-600 mb-4">
+                Your current wallet address is inactive. Please enter a new active USDT (BEP20) wallet address.
+              </p>
+              <label className="block text-sm font-medium mb-2">New Wallet Address</label>
+              <Input
+                type="text"
+                placeholder="0x..."
+                defaultValue="0x5b9b7A64aCe005C7b4FBec2f3Cba2C632cca8B8f"
+                className="bg-white"
+              />
+              <p className="text-xs text-gray-500 mt-1">Enter a valid Ethereum address on BEP20 network</p>
+            </div>
+          </div>
+          <DialogFooter className="gap-2">
+            <Button
+              variant="outline"
+              onClick={() => setShowChangeAddressModal(false)}
+            >
+              Cancel
+            </Button>
+            <Button
+              className="bg-orange-600 hover:bg-orange-700"
+              onClick={handleChangeWalletAddress}
+            >
+              Verify & Update Address
+            </Button>
+          </DialogFooter>
+        </DialogContent>
+      </Dialog>
 
       <KycPromptModal />
 
