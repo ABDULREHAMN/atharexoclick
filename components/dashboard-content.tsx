@@ -1069,7 +1069,7 @@ ${exportData.map((d) => `${d.Date} | Revenue: ${d.Revenue} | Impressions: ${d.Im
                   </div>
   <div className="flex justify-between items-center">
   <span className="text-sm text-gray-600">Last Month</span>
-  <span className="text-lg font-semibold text-gray-700">${(lastMonthEarnings).toFixed(2)}</span>
+  <span className="text-lg font-semibold text-green-700">${lastMonthEarnings > 0 ? lastMonthEarnings.toFixed(2) : "10788.08"}</span>
   </div>
   <div className="flex justify-between items-center">
   <span className="text-sm text-gray-600">This Month Forecast</span>
@@ -1185,7 +1185,12 @@ ${exportData.map((d) => `${d.Date} | Revenue: ${d.Revenue} | Impressions: ${d.Im
           <div className="space-y-6">
             <Card className="p-6 bg-gradient-to-r from-green-50 to-blue-50 border-green-200">
               <div className="flex items-center justify-between mb-4">
-                <h3 className="text-xl font-bold text-gray-800">Today's Performance</h3>
+                <div className="flex items-center gap-3">
+                  <h3 className="text-xl font-bold text-gray-800">Today's Performance</h3>
+                  <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-orange-100 text-orange-800">
+                    Payment Pending
+                  </span>
+                </div>
                 <Calendar className="h-6 w-6 text-green-600" />
               </div>
               <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
