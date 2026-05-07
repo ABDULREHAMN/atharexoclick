@@ -81,11 +81,10 @@ export function DashboardContent({ onNavigate }: DashboardContentProps) {
 
   const availableBalance = 734.93
   const pendingBalance = 9780.33
-  const thisMonthEarnings = 101.20
+  const thisMonthEarnings = 767.60
   const lastMonthEarnings = 10788.08
-  const thisMonthForecast = 3200.00
-  const totalPayments = 18000.33
-  const totalEarnings = 12462.74
+  const thisMonthForecast = 3400.00
+  const totalEarnings = 13230.34
   const nextWithdrawalDate = "30-04-2026"
 
   const allReportData = [
@@ -150,14 +149,23 @@ export function DashboardContent({ onNavigate }: DashboardContentProps) {
     { date: "Apr 26, 2026", impressions: 11520, clicks: 1102, revenue: 116.75, ctr: "9.56%", ecpm: "149.00" },
     { date: "Apr 27, 2026", impressions: 11850, clicks: 1105, revenue: 118.20, ctr: "9.32%", ecpm: "152.77" },
     { date: "Apr 28, 2026", impressions: 1267, clicks: 1166, revenue: 119.98, ctr: "92.04%", ecpm: "159.77" },
-    { date: "Apr 30, 2026", impressions: 9215, clicks: 510, revenue: 103.45, ctr: "5.53%", ecpm: "112.00" },
     { date: "May 01, 2026", impressions: 9180, clicks: 505, revenue: 101.20, ctr: "5.50%", ecpm: "110.00" },
+    { date: "May 02, 2026", impressions: 12280, clicks: 342, revenue: 108.35, ctr: "2.79%", ecpm: "112.00" },
+    { date: "May 03, 2026", impressions: 12310, clicks: 344, revenue: 109.40, ctr: "2.79%", ecpm: "113.00" },
+    { date: "May 04, 2026", impressions: 12295, clicks: 343, revenue: 110.15, ctr: "2.79%", ecpm: "114.00" },
+    { date: "May 05, 2026", impressions: 12315, clicks: 345, revenue: 111.75, ctr: "2.80%", ecpm: "115.00" },
+    { date: "May 06, 2026", impressions: 12300, clicks: 344, revenue: 112.40, ctr: "2.79%", ecpm: "114.00" },
+    { date: "May 07, 2026", impressions: 12312, clicks: 345, revenue: 114.35, ctr: "2.80%", ecpm: "115.00" },
   ]
 
   const recentActivityData = [
+    { date: "May 07, 2026", impressions: 12312, clicks: 345, revenue: 114.35, ctr: "2.80%", ecpm: "115.00" },
+    { date: "May 06, 2026", impressions: 12300, clicks: 344, revenue: 112.40, ctr: "2.79%", ecpm: "114.00" },
+    { date: "May 05, 2026", impressions: 12315, clicks: 345, revenue: 111.75, ctr: "2.80%", ecpm: "115.00" },
+    { date: "May 04, 2026", impressions: 12295, clicks: 343, revenue: 110.15, ctr: "2.79%", ecpm: "114.00" },
+    { date: "May 03, 2026", impressions: 12310, clicks: 344, revenue: 109.40, ctr: "2.79%", ecpm: "113.00" },
+    { date: "May 02, 2026", impressions: 12280, clicks: 342, revenue: 108.35, ctr: "2.79%", ecpm: "112.00" },
     { date: "May 01, 2026", impressions: 9180, clicks: 505, revenue: 101.20, ctr: "5.50%", ecpm: "110.00" },
-    { date: "Apr 30, 2026", impressions: 9215, clicks: 510, revenue: 103.45, ctr: "5.53%", ecpm: "112.00" },
-    { date: "Apr 29, 2026", impressions: 8897, clicks: 554, revenue: 6.75, ctr: "6.22%", ecpm: "149.77" },
     { date: "Apr 20, 2026", impressions: 12800, clicks: 1230, revenue: 119.50, ctr: "9.61%", ecpm: "155.00" },
     { date: "Apr 19, 2026", impressions: 12600, clicks: 1210, revenue: 117.90, ctr: "9.60%", ecpm: "154.00" },
     { date: "Apr 18, 2026", impressions: 12520, clicks: 1205, revenue: 118.60, ctr: "9.62%", ecpm: "153.00" },
@@ -214,19 +222,19 @@ export function DashboardContent({ onNavigate }: DashboardContentProps) {
   ]
 
   const latestActivity = {
-    date: "May 01, 2026",
-    revenue: 101.20,
-    impressions: 9180,
-    clicks: 505,
-    ctr: "5.50%",
-    ecpm: "110.00",
+    date: "May 07, 2026",
+    revenue: 114.35,
+    impressions: 12312,
+    clicks: 345,
+    ctr: "2.80%",
+    ecpm: "115.00",
   }
 
-  const todayRevenue = 101.20
-  const todayImpressions = 9180
-  const todayClicks = 505
-  const todayCTR = "5.50"
-  const todayECPM = "110.00"
+  const todayRevenue = 114.35
+  const todayImpressions = 12312
+  const todayClicks = 345
+  const todayCTR = "2.80"
+  const todayECPM = "115.00"
 
   const hourlyData = []
 
@@ -742,7 +750,7 @@ export function DashboardContent({ onNavigate }: DashboardContentProps) {
   }, [filteredReportData])
 
   // Display totals - show calculated when filters are active, otherwise show all time totals
-  const displayTotalRevenue = dashboardDateRange !== null ? calculatedTotalRevenue : 12462.74
+  const displayTotalRevenue = dashboardDateRange !== null ? calculatedTotalRevenue : 13230.34
   const displayTotalClicks = dashboardDateRange !== null ? calculatedTotalClicks : 60653
   const displayTotalImpressions = dashboardDateRange !== null ? calculatedTotalImpressions : 560835
 
