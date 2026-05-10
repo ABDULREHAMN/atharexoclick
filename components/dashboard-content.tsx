@@ -1073,6 +1073,20 @@ ${exportData.map((d) => `${d.Date} | Revenue: ${d.Revenue} | Impressions: ${d.Im
               </div>
             </Card>
 
+            {/* Available Balance Card */}
+            <Card className="p-6 bg-gradient-to-r from-emerald-50 to-teal-50 border-emerald-300 border-2">
+              <div className="flex items-center justify-between">
+                <div>
+                  <h3 className="text-lg font-semibold text-emerald-800 mb-1">Available Balance</h3>
+                  <p className="text-sm text-emerald-700">Current and potential balance</p>
+                </div>
+                <div className="text-right">
+                  <p className="text-xs text-emerald-600 mb-1">Range</p>
+                  <p className="text-2xl font-bold text-emerald-700">$734.93 - $989.22</p>
+                </div>
+              </div>
+            </Card>
+
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               <Card className="p-6 bg-gradient-to-br from-green-50 to-emerald-50 border-green-200">
                 <div className="flex items-center justify-between mb-4">
