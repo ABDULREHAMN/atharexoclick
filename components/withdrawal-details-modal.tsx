@@ -76,12 +76,12 @@ Next Withdrawal Date: January 12, 2026
 TRANSACTION TIMELINE:
 ✓ Withdrawal Requested - ${withdrawal.date}
 ✓ Under Review
-${isCompleted ? "✓" : "⏱"} Sent to Payoneer
+${isCompleted ? "✓" : "⏱"} Sent to Wallet
 ${isCompleted ? "✓" : "⏱"} Funds Received${isCompleted ? " - " + withdrawal.completedDate : ""}
 
 REFERENCE INFORMATION:
 Reference ID: ${withdrawal.id}
-Payment Channel: Payoneer Mass Payout
+Payment Channel: USDT (TRC20)
 Internal Note: Secure publisher payout
 
 INVOICE SUMMARY:
@@ -97,7 +97,7 @@ Description: A 5% withholding tax is deducted from this withdrawal before payout
 
 NOTES:
 - This is a system-generated invoice.
-- All payments are securely processed via Payoneer.
+- All payments are securely processed via USDT (TRC20) cryptocurrency.
 - Invoice is digitally verifiable using the QR code.
 - For support, contact: support@exoclick.com
 
@@ -161,7 +161,7 @@ This invoice is digitally signed and verified.
       date: null,
     },
     {
-      step: "Sent to Payoneer",
+      step: "Sent to Wallet",
       status: isCompleted ? "Completed" : isPending ? "Pending" : "Completed",
       date: null,
     },

@@ -607,10 +607,6 @@ Generated on: ${new Date().toLocaleDateString()}
                     <div className="text-2xl font-bold text-gray-800">${totalPayments.toFixed(2)}</div>
                   </div>
                   <div>
-                    <div className="text-sm text-gray-600">Next Withdrawal</div>
-                    <div className="text-lg font-semibold text-gray-800">{nextWithdrawalDate}</div>
-                  </div>
-                  <div>
                     <div className="text-sm text-gray-600">Pending</div>
                     <div className="text-2xl font-bold text-yellow-600">${pendingBalance.toFixed(2)}</div>
                     <div className="text-xs text-gray-500">{nextWithdrawalDate}</div>
