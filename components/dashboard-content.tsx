@@ -1068,7 +1068,7 @@ ${exportData.map((d) => `${d.Date} | Revenue: ${d.Revenue} | Impressions: ${d.Im
                 </div>
                 <div className="text-right">
                   <p className="text-xs text-purple-600 mb-1">Range</p>
-                  <p className="text-2xl font-bold text-purple-700">$0.0 - $10,788.08</p>
+                  <p className="text-2xl font-bold text-purple-700">$0.00 - ${lastMonthEarnings.toFixed(2)}</p>
                 </div>
               </div>
             </Card>
