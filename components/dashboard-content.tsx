@@ -1090,7 +1090,7 @@ ${exportData.map((d) => `${d.Date} | Revenue: ${d.Revenue} | Impressions: ${d.Im
   </div>
   <div className="flex justify-between items-center">
   <span className="text-sm text-gray-600">This Month Forecast</span>
-  <span className="text-lg font-semibold text-blue-600">${(thisMonthForecast).toFixed(2)}</span>
+  <span className="text-lg font-semibold text-blue-600">$0.00 - ${(thisMonthForecast).toFixed(2)}</span>
   </div>
   <div className="flex justify-between items-center">
   <span className="text-sm text-gray-600">Growth Rate</span>
