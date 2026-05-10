@@ -242,9 +242,9 @@ export function DashboardContent({ onNavigate }: DashboardContentProps) {
   const hourlyData = []
 
   const todayTotals = {
-    impressions: 897,
-    clicks: 54,
-    revenue: 6.75,
+    impressions: 6125,
+    clicks: 315,
+    revenue: 60.10,
   }
 
   // This ensures all data aggregates to locked totals: $4,819.23 revenue, 32,687 clicks, 567,531 impressions
@@ -1059,6 +1059,34 @@ ${exportData.map((d) => `${d.Date} | Revenue: ${d.Revenue} | Impressions: ${d.Im
         {/* Widget Content */}
         {activeWidget === "default" && (
           <div className="space-y-6">
+            {/* Payment Status Card */}
+            <Card className="p-6 bg-gradient-to-r from-purple-50 to-indigo-50 border-purple-300 border-2">
+              <div className="flex items-center justify-between">
+                <div>
+                  <h3 className="text-lg font-semibold text-purple-800 mb-1">Last Month Payment</h3>
+                  <p className="text-sm text-purple-700">Total earnings from April 2026</p>
+                </div>
+                <div className="text-right">
+                  <p className="text-xs text-purple-600 mb-1">Range</p>
+                  <p className="text-2xl font-bold text-purple-700">$0.0 - $10,788.08</p>
+                </div>
+              </div>
+            </Card>
+
+            {/* Available Balance Card */}
+            <Card className="p-6 bg-gradient-to-r from-emerald-50 to-teal-50 border-emerald-300 border-2">
+              <div className="flex items-center justify-between">
+                <div>
+                  <h3 className="text-lg font-semibold text-emerald-800 mb-1">Available Balance</h3>
+                  <p className="text-sm text-emerald-700">Current and potential balance</p>
+                </div>
+                <div className="text-right">
+                  <p className="text-xs text-emerald-600 mb-1">Range</p>
+                  <p className="text-2xl font-bold text-emerald-700">$734.93 - $989.22</p>
+                </div>
+              </div>
+            </Card>
+
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               <Card className="p-6 bg-gradient-to-br from-green-50 to-emerald-50 border-green-200">
                 <div className="flex items-center justify-between mb-4">
@@ -1076,7 +1104,7 @@ ${exportData.map((d) => `${d.Date} | Revenue: ${d.Revenue} | Impressions: ${d.Im
   </div>
   <div className="flex justify-between items-center">
   <span className="text-sm text-gray-600">This Month Forecast</span>
-  <span className="text-lg font-semibold text-blue-600">${(thisMonthForecast).toFixed(2)}</span>
+  <span className="text-lg font-semibold text-blue-600">$0.00 - ${(thisMonthForecast).toFixed(2)}</span>
   </div>
   <div className="flex justify-between items-center">
   <span className="text-sm text-gray-600">Growth Rate</span>
