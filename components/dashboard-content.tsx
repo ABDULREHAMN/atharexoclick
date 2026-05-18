@@ -80,7 +80,7 @@ export function DashboardContent({ onNavigate }: DashboardContentProps) {
   }
 
   const availableBalance = 734.93
-  const pendingBalance = 9780.33
+  const pendingBalance = 0.00
   const thisMonthEarnings = 1417.45
   const lastMonthEarnings = 10788.08
   const thisMonthForecast = 3400.00
