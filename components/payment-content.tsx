@@ -99,9 +99,9 @@ export function PaymentContent({ onNavigate }: PaymentContentProps) {
       date: "30-04-2026",
       amount: 9780.33,
       method: "USDT (TRC20)",
-      status: "Pending",
+      status: "Completed",
       email: "abdul.rehman.soashraf@gmail.com",
-      processingTime: "Crypto withdrawal initiated - Processing time 8-10 days - Fee: $5.00 - Final: $9,775.33",
+      processingTime: "Withdrawal successfully sent to wallet and confirmed on TRC20 network - Completed 18-05-2026",
     }
   ])
 
@@ -175,21 +175,21 @@ export function PaymentContent({ onNavigate }: PaymentContentProps) {
   }, [withdrawalHistory])
 
   const availableBalance = 734.93
-  const pendingBalance = 9780.33
+  const pendingBalance = 0.00
   const totalEarnings = 12258.09
   const totalPayments = 18000.33
-  const thisMonthEarnings = 10684.63
+  const thisMonthEarnings = 1417.45
   const nextWithdrawalDate = "30-04-2026"
 
   const paymentEntries = [
     {
       id: "WD-30042026",
       date: "30-04-2026",
-      method: "USDT (BEP20)",
+      method: "USDT (TRC20)",
       amount: 9780.33,
-      status: "Pending",
-      processing_time: "Crypto withdrawal initiated - Processing time 8-10 days - Fee: $5.00 - Final: $9,775.33",
-      payout_date: "30-04-2026",
+      status: "Completed",
+      processing_time: "Withdrawal successfully sent to wallet and confirmed on TRC20 network - Completed 18-05-2026",
+      payout_date: "18-05-2026",
     },
     {
       id: "WD-14042026",
