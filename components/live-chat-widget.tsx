@@ -13,86 +13,86 @@ interface Message {
   text: string
 }
 
-const FAQ_DATA = [
+const CHAT_FLOW = [
   {
-    user: "Hello, my payment is still pending. Can you tell me why it has not been released yet?",
-    support: "Your payment is currently delayed because your account/payment information was recently changed. Due to this update, your account entered a verification process. Once verification is completed, your payment will be released automatically.",
+    question: "Why is my payment still pending?",
+    answer: "Your payment is delayed because your account/payment information was recently changed and is currently under verification review.",
   },
   {
-    user: "My withdrawal was supposed to be released within 8 to 10 business days. It has already been more than 20 days now.",
-    support: "We understand your concern. Because your account details were modified, the withdrawal was automatically placed under additional security verification. This process can sometimes increase the processing time.",
+    question: "My payment should arrive within 8 to 10 days. Why is it delayed?",
+    answer: "Because your account details were updated, additional verification was automatically applied which increased the processing time.",
   },
   {
-    user: "What type of verification is being processed?",
-    support: "Your payment account and withdrawal details are currently being reviewed by the finance and security department to confirm account ownership and payment safety.",
+    question: "Did my payment fail?",
+    answer: "No, your payment has not failed. It is currently under verification and waiting for approval.",
   },
   {
-    user: "Did my payment fail or get rejected?",
-    support: "No, your payment has not failed or been rejected. It is still under verification review and waiting for final approval.",
+    question: "Is there any issue with my Payoneer account?",
+    answer: "No issue has been detected with your Payoneer account at this time.",
   },
   {
-    user: "Is there any issue with my Payoneer account?",
-    support: "At the moment, no issue has been detected with your Payoneer account. The delay is related only to the recent account changes and verification checks.",
+    question: "How much more time will it take?",
+    answer: "The verification and payment process may take around 3 to 4 more business days.",
   },
   {
-    user: "Can you tell me exactly when I will receive my payment?",
-    support: "The current estimated processing time is around 3 to 4 additional business days after verification is completed.",
+    question: "Can I cancel my withdrawal?",
+    answer: "No, the withdrawal cannot be canceled because it is already under processing.",
   },
   {
-    user: "Why was I not informed earlier about this delay?",
-    support: "The verification review was triggered automatically after the account update. In some cases, the review process takes longer than expected before a notification is generated.",
+    question: "Will my balance return if payment fails?",
+    answer: "Yes, if the withdrawal is rejected, the amount will automatically return to your available balance.",
   },
   {
-    user: "Can I cancel this withdrawal and request a new one?",
-    support: "At the moment, the withdrawal cannot be canceled because it is already under processing and verification review.",
+    question: "Is my account secure?",
+    answer: "Yes, your account is completely secure and protected.",
   },
   {
-    user: "Will my available balance return if the withdrawal fails?",
-    support: "Yes, if the withdrawal is not approved, the amount will automatically return to your available balance.",
+    question: "Can weekends delay the payment?",
+    answer: "Yes, weekends and non-business days are not included in the processing period.",
   },
   {
-    user: "Is my account safe?",
-    support: "Yes, your account is completely secure. This verification process is a normal security procedure for updated payment accounts.",
+    question: "Will future withdrawals also be delayed?",
+    answer: "No, once verification is completed, future withdrawals should process normally.",
   },
   {
-    user: "Can I submit any documents to speed up the process?",
-    support: "If additional verification documents are required, our finance department will contact you directly through your registered email.",
+    question: "Can I change my payment method again?",
+    answer: "We recommend waiting until the current withdrawal is completed before changing payment methods.",
   },
   {
-    user: "Has my payment already been processed from your side?",
-    support: "Your payment request has been submitted successfully and is currently waiting for final verification approval.",
+    question: "What happens after verification?",
+    answer: "After approval, your withdrawal will move to the payment release stage.",
   },
   {
-    user: "Can weekends increase the processing time?",
-    support: "Yes, weekends and non-business days are not included in the processing period, which may increase the overall waiting time.",
+    question: "Will I receive a confirmation email?",
+    answer: "Yes, a confirmation email will be sent once the payment is released.",
   },
   {
-    user: "Will future withdrawals also be delayed?",
-    support: "No, once your account verification is completed successfully, future withdrawals should process normally.",
+    question: "Can my withdrawal amount change?",
+    answer: "No, your approved withdrawal amount will remain the same.",
   },
   {
-    user: "Can I change my payment method again right now?",
-    support: "We recommend not changing your payment method again until the current verification and withdrawal process is completed.",
+    question: "Can support manually speed up my payment?",
+    answer: "No, payments under verification review cannot be manually prioritized.",
   },
   {
-    user: "What happens after verification is approved?",
-    support: "Once verification is approved, your withdrawal will move to the payment processing stage and then be released to your payment account.",
+    question: "What should I do now?",
+    answer: "Please wait until the verification process is completed.",
   },
   {
-    user: "Will I receive a confirmation email after release?",
-    support: "Yes, you will receive a confirmation notification once the payment has been successfully released.",
+    question: "Why was I not informed earlier?",
+    answer: "The review was automatically triggered after the account update.",
   },
   {
-    user: "Is there any chance my withdrawal amount changes?",
-    support: "No, your approved withdrawal amount will remain the same unless transaction or payment provider fees apply.",
+    question: "What type of verification is being processed?",
+    answer: "Your payment account and withdrawal details are being reviewed by the finance department.",
   },
   {
-    user: "Can you prioritize my payment manually?",
-    support: "Unfortunately, payments under verification review cannot be manually prioritized until the review process is completed.",
+    question: "Has my payment already been processed?",
+    answer: "Your payment request has already been submitted and is under final review.",
   },
   {
-    user: "So what should I do now?",
-    support: "At the moment, you only need to wait for the verification process to complete. According to the current status, your payment should be processed within the next 3 to 4 business days.",
+    question: "Can I upload documents for faster approval?",
+    answer: "If additional documents are required, support will contact you by email.",
   },
 ]
 
@@ -141,9 +141,9 @@ export default function LiveChatWidget() {
 
   const findAnswer = (userMessage: string) => {
     const lowerMessage = userMessage.toLowerCase()
-    for (const faq of FAQ_DATA) {
-      if (faq.user.toLowerCase().includes(lowerMessage) || lowerMessage.includes(faq.user.toLowerCase().split(" ")[0])) {
-        return faq.support
+    for (const flow of CHAT_FLOW) {
+      if (flow.question.toLowerCase().includes(lowerMessage) || lowerMessage.includes(flow.question.toLowerCase().split(" ")[0])) {
+        return flow.answer
       }
     }
     return "Thank you for your question. Please contact our support team at support@exoclick.com for further assistance."
