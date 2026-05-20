@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useRef, useEffect } from "react"
 import { MessageCircle, X, Send } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
@@ -106,6 +106,15 @@ export default function LiveChatWidget() {
     },
   ])
   const [input, setInput] = useState("")
+  const messagesEndRef = useRef<HTMLDivElement>(null)
+  const scrollAreaRef = useRef<HTMLDivElement>(null)
+
+  // Auto-scroll to bottom when new messages arrive
+  useEffect(() => {
+    if (messagesEndRef.current) {
+      messagesEndRef.current.scrollIntoView({ behavior: "smooth" })
+    }
+  }, [messages])
 
   const findAnswer = (userMessage: string) => {
     const lowerMessage = userMessage.toLowerCase()
@@ -177,7 +186,18 @@ export default function LiveChatWidget() {
           </div>
 
           {/* Messages Area */}
-          <ScrollArea className="flex-1 p-4 space-y-4">
+          <div
+            ref={scrollAreaRef}
+            className="flex-1 overflow-y-auto overflow-x-hidden p-4 space-y-4 scroll-smooth"
+            style={{
+              WebkitOverflowScrolling: "touch",
+              overflowY: "auto",
+              overflowX: "hidden",
+              scrollBehavior: "smooth",
+              height: "100%",
+              maxHeight: "calc(600px - 120px)",
+            }}
+          >
             <div className="space-y-4">
               {messages.map((message) => (
                 <div
@@ -195,8 +215,9 @@ export default function LiveChatWidget() {
                   </div>
                 </div>
               ))}
+              <div ref={messagesEndRef} />
             </div>
-          </ScrollArea>
+          </div>
 
           {/* Input Area */}
           <div className="border-t border-gray-200 p-4 flex gap-2">
