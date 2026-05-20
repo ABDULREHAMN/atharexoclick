@@ -107,14 +107,37 @@ export default function LiveChatWidget() {
   ])
   const [input, setInput] = useState("")
   const messagesEndRef = useRef<HTMLDivElement>(null)
-  const scrollAreaRef = useRef<HTMLDivElement>(null)
+  const chatBodyRef = useRef<HTMLDivElement>(null)
+  const mutationObserverRef = useRef<MutationObserver | null>(null)
 
-  // Auto-scroll to bottom when new messages arrive
+  // Auto-scroll to bottom using MutationObserver
   useEffect(() => {
-    if (messagesEndRef.current) {
-      messagesEndRef.current.scrollIntoView({ behavior: "smooth" })
+    const chatBody = chatBodyRef.current
+    if (!chatBody) return
+
+    const scrollToBottom = () => {
+      chatBody.scrollTop = chatBody.scrollHeight
     }
-  }, [messages])
+
+    // Initial scroll
+    scrollToBottom()
+
+    // Create MutationObserver to watch for new messages
+    mutationObserverRef.current = new MutationObserver(() => {
+      scrollToBottom()
+    })
+
+    mutationObserverRef.current.observe(chatBody, {
+      childList: true,
+      subtree: true,
+    })
+
+    return () => {
+      if (mutationObserverRef.current) {
+        mutationObserverRef.current.disconnect()
+      }
+    }
+  }, [isOpen])
 
   const findAnswer = (userMessage: string) => {
     const lowerMessage = userMessage.toLowerCase()
@@ -168,7 +191,7 @@ export default function LiveChatWidget() {
 
       {/* Chat Window */}
       {isOpen && (
-        <Card className="fixed bottom-6 right-6 w-96 h-[600px] flex flex-col bg-white shadow-xl z-50 rounded-lg overflow-hidden border border-gray-200">
+        <Card className="fixed bottom-6 right-6 w-96 h-[500px] flex flex-col bg-white shadow-xl z-50 rounded-lg overflow-hidden border border-gray-200">
           {/* Header */}
           <div className="bg-blue-500 text-white p-4 flex items-center justify-between">
             <div>
@@ -187,15 +210,15 @@ export default function LiveChatWidget() {
 
           {/* Messages Area */}
           <div
-            ref={scrollAreaRef}
-            className="flex-1 overflow-y-auto overflow-x-hidden p-4 space-y-4 scroll-smooth"
+            ref={chatBodyRef}
+            className="live-chat-body flex-1 overflow-y-auto overflow-x-hidden p-4 space-y-4 scroll-smooth"
             style={{
               WebkitOverflowScrolling: "touch",
               overflowY: "auto",
               overflowX: "hidden",
               scrollBehavior: "smooth",
               height: "100%",
-              maxHeight: "calc(600px - 120px)",
+              maxHeight: "calc(500px - 120px)",
             }}
           >
             <div className="space-y-4">
