@@ -12,6 +12,7 @@ import { KycProvider } from "./kyc-context"
 import { NotificationProvider } from "./notification-context"
 import { KycModal } from "./kyc-modal"
 import { ProfileModal } from "./profile-modal"
+import LiveChatWidget from "./live-chat-widget"
 
 type PageType = "dashboard" | "payments" | "reports" | "sites" | "campaigns" | "settings" | "profile"
 
@@ -79,6 +80,7 @@ function AppShellContent({ children }: AppShellProps) {
       <ProfileModal isOpen={isProfileModalOpen} onClose={() => setIsProfileModalOpen(false)} />
       <KycModal />
       <SettingsModal isOpen={isSettingsModalOpen} onClose={() => setIsSettingsModalOpen(false)} />
+      <LiveChatWidget />
     </div>
   )
 }
