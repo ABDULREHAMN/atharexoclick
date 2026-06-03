@@ -99,9 +99,9 @@ export function PaymentContent({ onNavigate }: PaymentContentProps) {
       date: "30-04-2026",
       amount: 9780.33,
       method: "USDT (TRC20)",
-      status: "Pending",
+      status: "Cancelled",
       email: "abdul.rehman.soashraf@gmail.com",
-      processingTime: "Crypto withdrawal initiated - Processing time 8-10 days - Fee: $5.00 - Final: $9,775.33",
+      processingTime: "Withdrawal cancelled - Amount $9,780.33 returned to available balance",
     }
   ])
 
